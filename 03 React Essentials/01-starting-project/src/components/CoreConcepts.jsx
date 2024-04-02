@@ -1,11 +1,21 @@
-function CoreConcepts({ image, title, description }) {
+import React from "react";
+import CoreConcept from "./CoreConcept";
+import { CORE_CONCEPTS } from "../data";
+
+const CoreConcepts = () => {
   return (
-    <li>
-      <img src={image} alt="..." />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
+    <section id="core-concepts">
+      <h2>Time to get started!</h2>
+      <ul>
+        {CORE_CONCEPTS.map((item, index) => (
+          <CoreConcept key={index} {...item} />
+          // <CoreConcepts {...CORE_CONCEPTS[1]} />
+          //<CoreConcepts {...CORE_CONCEPTS[2]} />
+          //<CoreConcepts {...CORE_CONCEPTS[3]} />
+        ))}
+      </ul>
+    </section>
   );
-}
+};
 
 export default CoreConcepts;
