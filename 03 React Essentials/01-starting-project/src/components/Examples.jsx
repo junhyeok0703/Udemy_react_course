@@ -26,6 +26,7 @@ const Examples = () => {
   return (
     <Section id="examples" title="Examples">
       <Tabs
+        ButtonContainer="menu"
         buttons={
           <div>
             <TabButton

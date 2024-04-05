@@ -1,9 +1,9 @@
 import React from "react";
 
-const Tabs = ({ children, buttons }) => {
+const Tabs = ({ children, buttons, ButtonContainer }) => {
   return (
     <>
-      <menu>{buttons}</menu>
+      <ButtonContainer>{buttons}</ButtonContainer>
       {children}
     </>
   );
